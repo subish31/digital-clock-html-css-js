@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .clock {
+    border :5px solid rgb(6, 6, 128);
+    background-color: rgb(35, 176, 227);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 20vh;
+    font-size: 22vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 20.4vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+  }
+  
+ 
+  .clock::after {
+    bottom: 0;
+  }
+  
+  .clock > div {
+    display: flex;
+  }
+  
+  .tick-hidden {
+    opacity: 0;
+  }
+  
+  .move {
+    animation: move linear 1s infinite;
+  }
+  
+  @keyframes move {
+    from {
+      transform: translateY(0vh);
+    }
+    to {
+      transform: translateY(-20vh);
+    }
+  }
+  
